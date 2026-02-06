@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">FocusFlow</string>
+    
+    <!-- Splash Screen -->
+    <string name="splash_tagline">Your 30-Day Reset Starts Now</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_title">Welcome to FocusFlow</string>
+    <string name="onboarding_welcome_subtitle">Build focus without pressure</string>
+    <string name="onboarding_welcome_feature_1">Set ONE goal at a time</string>
+    <string name="onboarding_welcome_feature_2">Focus on 1–3 daily tasks</string>
+    <string name="onboarding_welcome_feature_3">Complete at your own pace</string>
+    
+    <string name="onboarding_privacy_title">Privacy First</string>
+    <string name="onboarding_privacy_subtitle">Your data stays on your device. Always.</string>
+    <string name="onboarding_privacy_feature_1">Local storage only</string>
+    <string name="onboarding_privacy_feature_2">No account required</string>
+    <string name="onboarding_privacy_feature_3">No tracking</string>
+    <string name="onboarding_privacy_feature_4">No location access</string>
+    
+    <string name="onboarding_btn_next">Next</string>
+    <string name="onboarding_btn_skip">Skip</string>
+    <string name="onboarding_btn_get_started">Get Started</string>
+    
+    <!-- Goal Setup -->
+    <string name="goal_setup_title">Your 30-Day Goal</string>
+    <string name="goal_setup_duration_label">Choose Duration</string>
+    <string name="goal_setup_duration_daily">Daily</string>
+    <string name="goal_setup_duration_weekly">Weekly</string>
+    <string name="goal_setup_duration_monthly">Monthly</string>
+    <string name="goal_setup_what_label">What do you want to achieve in 30 days?</string>
+    <string name="goal_setup_what_hint">e.g., Learn to play guitar</string>
+    <string name="goal_setup_why_label">Why is this important to you? (Optional)</string>
+    <string name="goal_setup_why_hint">e.g., I\'ve always wanted to play music</string>
+    <string name="goal_setup_btn_commit">Commit to Your Goal</string>
+    
+    <!-- Home Screen -->
+    <string name="home_greeting">Good morning</string>
+    <string name="home_privacy_badge">🔒 100%% Private</string>
+    <string name="home_day_counter">Day %1$d of 30</string>
+    <string name="home_streak">🔥 Streak: %1$d days</string>
+    <string name="home_today_focus">TODAY\'S FOCUS</string>
+    <string name="home_task_hint">What will you focus on today?</string>
+    <string name="home_btn_add_task">+ Add Task</string>
+    <string name="home_btn_mark_complete">✓ Mark Complete</string>
+    <string name="home_max_tasks_reached">Maximum 3 tasks per day</string>
+    
+    <!-- Progress Screen -->
+    <string name="progress_title">Progress</string>
+    <string name="progress_streak_label">Current Streak</string>
+    <string name="progress_streak_value">%1$d days</string>
+    <string name="progress_completion_label">Completion Rate</string>
+    <string name="progress_completion_value">%1$d%%</string>
+    <string name="progress_tasks_label">Tasks Finished</string>
+    <string name="progress_tasks_value">%1$d of %2$d</string>
+    <string name="progress_calendar_title">30-Day Calendar</string>
+    
+    <!-- Privacy Screen -->
+    <string name="privacy_title">Privacy &amp; Data</string>
+    <string name="privacy_header_title">Privacy First</string>
+    <string name="privacy_header_subtitle">Your data stays on your device</string>
+    <string name="privacy_stored_title">What We Store (On Your Device Only)</string>
+    <string name="privacy_stored_1">Your goals</string>
+    <string name="privacy_stored_2">Daily tasks</string>
+    <string name="privacy_stored_3">Progress &amp; streaks</string>
+    <string name="privacy_stored_4">Reflections (optional)</string>
+    <string name="privacy_not_collected_title">What We Don\'t Collect</string>
+    <string name="privacy_not_collected_1">No personal information</string>
+    <string name="privacy_not_collected_2">No analytics or tracking</string>
+    <string name="privacy_not_collected_3">No location data</string>
+    <string name="privacy_guarantee_title">Privacy Guarantee</string>
+    <string name="privacy_guarantee_text">Your data never leaves your device. We can\'t see it. No one can.</string>
+    <string name="privacy_btn_clear_data">Clear All Data</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_more">More</string>
+    
+    <!-- Common -->
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_ok">OK</string>
+    
+    <!-- Error Messages -->
+    <string name="error_empty_goal">Please enter your goal</string>
+    <string name="error_empty_task">Please enter a task</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+</resources>

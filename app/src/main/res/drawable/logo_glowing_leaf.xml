@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Glowing Leaf Logo - Animated with glow effect -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Outer glow (largest) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/glow_green_soft"/>
+            <size android:width="120dp" android:height="120dp"/>
+        </shape>
+    </item>
+    
+    <!-- Middle glow -->
+    <item 
+        android:top="10dp"
+        android:bottom="10dp"
+        android:left="10dp"
+        android:right="10dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/glow_green_medium"/>
+            <size android:width="100dp" android:height="100dp"/>
+        </shape>
+    </item>
+    
+    <!-- Inner glow -->
+    <item 
+        android:top="20dp"
+        android:bottom="20dp"
+        android:left="20dp"
+        android:right="20dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/glow_green_strong"/>
+            <size android:width="80dp" android:height="80dp"/>
+        </shape>
+    </item>
+    
+    <!-- Leaf background circle -->
+    <item 
+        android:top="30dp"
+        android:bottom="30dp"
+        android:left="30dp"
+        android:right="30dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/green_primary"/>
+            <size android:width="60dp" android:height="60dp"/>
+        </shape>
+    </item>
+    
+</layer-list>

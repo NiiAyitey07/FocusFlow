@@ -1,0 +1,27 @@
+// Top-level build file for FocusFlow Android App
+// Compatible with GitHub Actions - auto-builds APK
+
+buildscript {
+    ext.kotlin_version = '1.9.21'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // Uncomment if using Firebase:
+        // classpath 'com.google.gms:google-services:4.4.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
