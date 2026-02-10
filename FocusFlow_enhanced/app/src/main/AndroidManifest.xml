@@ -45,6 +45,10 @@
         <activity
             android:name=".ui.goal.GoalSetupActivity"
             android:exported="false" />
+
+        <receiver
+            android:name=".notifications.ReminderReceiver"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -37,4 +37,27 @@ interface TaskDao {
     
     @Query("SELECT COUNT(*) FROM tasks WHERE goalId = :goalId AND isCompleted = 1")
     suspend fun getCompletedTaskCount(goalId: Long): Int
+
+    // --- Aggregates for progress/streak ---
+    @Query("SELECT DISTINCT date FROM tasks WHERE goalId = :goalId ORDER BY date DESC")
+    suspend fun getDistinctTaskDates(goalId: Long): List<Date>
+
+    @Query("SELECT COUNT(*) FROM tasks WHERE goalId = :goalId AND date = :date")
+    suspend fun getTotalTaskCountForDate(goalId: Long, date: Date): Int
+
+    @Query("SELECT COUNT(*) FROM tasks WHERE goalId = :goalId AND date = :date AND isCompleted = 0")
+    suspend fun getIncompleteTaskCountForDate(goalId: Long, date: Date): Int
+
+    // --- Carryover + edits ---
+    @Query("SELECT * FROM tasks WHERE goalId = :goalId AND date < :today AND isCompleted = 0 ORDER BY date ASC, createdAt ASC")
+    suspend fun getIncompleteTasksBefore(goalId: Long, today: Date): List<Task>
+
+    @Query("UPDATE tasks SET date = :newDate WHERE id = :taskId")
+    suspend fun updateTaskDate(taskId: Long, newDate: Date)
+
+    @Query("UPDATE tasks SET title = :title, description = :description WHERE id = :taskId")
+    suspend fun updateTaskDetails(taskId: Long, title: String, description: String?)
+
+    @Query("DELETE FROM tasks")
+    suspend fun deleteAll()
 }

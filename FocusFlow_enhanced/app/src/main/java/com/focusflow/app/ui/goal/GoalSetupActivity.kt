@@ -13,6 +13,7 @@ import com.focusflow.app.data.model.Duration
 import com.focusflow.app.data.model.Goal
 import com.focusflow.app.ui.main.MainActivity
 import com.focusflow.app.utils.PreferencesManager
+import com.focusflow.app.utils.DateUtils
 import com.google.android.material.chip.ChipGroup
 import kotlinx.coroutines.launch
 import java.util.*
@@ -57,10 +58,11 @@ class GoalSetupActivity : AppCompatActivity() {
             }
             
             // Create goal
-            val startDate = Date()
+            val startDate = DateUtils.startOfDay(Date())
             val calendar = Calendar.getInstance()
             calendar.time = startDate
-            calendar.add(Calendar.DAY_OF_YEAR, 30)
+            // 30-day goal, inclusive (Day 1..30) => +29 days
+            calendar.add(Calendar.DAY_OF_YEAR, 29)
             val endDate = calendar.time
             
             val goal = Goal(
@@ -73,6 +75,8 @@ class GoalSetupActivity : AppCompatActivity() {
             
             // Save to database
             lifecycleScope.launch {
+                // Ensure only one active goal at a time
+                FocusFlowApplication.database.goalDao().deactivateAllGoals()
                 val goalId = FocusFlowApplication.database.goalDao().insertGoal(goal)
                 prefsManager.setCurrentGoalId(goalId)
                 

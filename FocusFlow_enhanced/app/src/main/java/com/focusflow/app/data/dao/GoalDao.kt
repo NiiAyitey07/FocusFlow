@@ -30,7 +30,13 @@ interface GoalDao {
     
     @Query("UPDATE goals SET isActive = 0 WHERE id = :goalId")
     suspend fun deactivateGoal(goalId: Long)
+
+    @Query("UPDATE goals SET isActive = 0")
+    suspend fun deactivateAllGoals()
     
     @Query("UPDATE goals SET completedDays = :days, currentStreak = :streak WHERE id = :goalId")
     suspend fun updateProgress(goalId: Long, days: Int, streak: Int)
+
+    @Query("DELETE FROM goals")
+    suspend fun deleteAll()
 }
